@@ -4,11 +4,13 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.claasagrotechnology"
-        minSdkVersion 15
+        minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -31,4 +33,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+
+    // MVP Moxy
+    implementation 'com.arello-mobile:moxy:1.5.5'
+    implementation 'com.arello-mobile:moxy-android:1.5.5'
+    implementation 'com.arello-mobile:moxy-app-compat:1.5.5'
+    kapt 'com.arello-mobile:moxy-compiler:1.5.5'
+
+    // Navigation
+    implementation 'ru.terrakok.cicerone:cicerone:5.0.0'
 }
